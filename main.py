@@ -1,7 +1,9 @@
 #Main Codespace
 
 class Employee:
-    pass
+    def __init__(self, name):
+        self.name = name
+        self.report_log = []
 
 
 class Host(Employee):
@@ -9,10 +11,15 @@ class Host(Employee):
 
 
 class Cook(Employee):
-    pass
+    def __init__(self, name):
+        super().__init__(name)
+        self.orders_prepared = 0
 
 
 class Waiter(Employee):
+    pass
+
+class Other(Employee):
     pass
 
 class Organization:
