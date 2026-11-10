@@ -23,10 +23,14 @@ def home_menu():
     print("Home Menu")
     print("1. Choose/Add Organization")
     print("2. View Organizations")
+    print("3. Quit")
 
-    if input("Enter your choice: ") == "1":
+    choice = input("Enter your choice: ")
+    if choice == "1":
         pass
-    elif input("Enter your choice: ") == "2":
+    elif choice == "2":
+        pass
+    elif choice == "3":
         pass
     else:
         print("Invalid choice")
