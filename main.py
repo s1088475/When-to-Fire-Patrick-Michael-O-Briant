@@ -48,11 +48,22 @@ def home_menu():
         if choice == "1":
             organization_menu(organizations)
         elif choice == "2":
-            pass
+            view_organizations(organizations)
         elif choice == "3":
             return
         else:
             print("Invalid choice")
+
+
+def view_organizations(organizations):
+    if not organizations:
+        print("Nothing here yet")
+    else:
+        print("Organizations:")
+        for organization in organizations:
+            print(organization.name)
+
+    input("Type anything to go back: ")
 
 
 def organization_menu(organizations):
@@ -70,7 +81,7 @@ def organization_menu(organizations):
             organizations.append(Organization(name))
             print(f"Added {name}")
         elif choice == "3":
-            pass
+            return
         else:
             print("Invalid choice")
 
