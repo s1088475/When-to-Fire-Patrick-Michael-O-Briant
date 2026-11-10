@@ -28,10 +28,16 @@ class Other(Employee):
         super().__init__(name)
 
 class Organization:
-    pass
+    def __init__(self, name):
+        self.name = name
+        self.employees = []
+
+    def add_employee(self, employee):
+        self.employees.append(employee)
 
 
 def home_menu():
+    organizations = []
     while True:
         print("Home Menu")
         print("1. Choose/Add Organization")
@@ -40,7 +46,7 @@ def home_menu():
 
         choice = input("Enter your choice: ")
         if choice == "1":
-            organization_menu()
+            organization_menu(organizations)
         elif choice == "2":
             pass
         elif choice == "3":
@@ -49,7 +55,7 @@ def home_menu():
             print("Invalid choice")
 
 
-def organization_menu():
+def organization_menu(organizations):
     while True:
         print("Organization Menu")
         print("1. Choose Organization")
@@ -57,9 +63,15 @@ def organization_menu():
         print("3. Back")
 
         choice = input("Enter your choice: ")
-        if choice == "3":
-            return
-        elif choice not in ("1", "2"):
+        if choice == "1":
+            pass
+        elif choice == "2":
+            name = input("Organization name: ")
+            organizations.append(Organization(name))
+            print(f"Added {name}")
+        elif choice == "3":
+            pass
+        else:
             print("Invalid choice")
 
 
