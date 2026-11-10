@@ -32,20 +32,35 @@ class Organization:
 
 
 def home_menu():
-    print("Home Menu")
-    print("1. Choose/Add Organization")
-    print("2. View Organizations")
-    print("3. Quit")
+    while True:
+        print("Home Menu")
+        print("1. Choose/Add Organization")
+        print("2. View Organizations")
+        print("3. Quit")
 
-    choice = input("Enter your choice: ")
-    if choice == "1":
-        pass
-    elif choice == "2":
-        pass
-    elif choice == "3":
-        pass
-    else:
-        print("Invalid choice")
+        choice = input("Enter your choice: ")
+        if choice == "1":
+            organization_menu()
+        elif choice == "2":
+            pass
+        elif choice == "3":
+            return
+        else:
+            print("Invalid choice")
+
+
+def organization_menu():
+    while True:
+        print("Organization Menu")
+        print("1. Choose Organization")
+        print("2. Add Organization")
+        print("3. Back")
+
+        choice = input("Enter your choice: ")
+        if choice == "3":
+            return
+        elif choice not in ("1", "2"):
+            print("Invalid choice")
 
 
 home_menu()
