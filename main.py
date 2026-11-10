@@ -7,7 +7,9 @@ class Employee:
 
 
 class Host(Employee):
-    pass
+    def __init__(self, name):
+        super().__init__(name)
+        self.parties_seated = 0
 
 
 class Cook(Employee):
@@ -17,10 +19,13 @@ class Cook(Employee):
 
 
 class Waiter(Employee):
-    pass
+    def __init__(self, name):
+        super().__init__(name)
+        self.tables_served = 0
 
 class Other(Employee):
-    pass
+    def __init__(self, name):
+        super().__init__(name)
 
 class Organization:
     pass
