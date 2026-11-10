@@ -23,4 +23,11 @@ class Organization:
         #def add_employee -- ???
         pass
 
-print("Hello world")
+
+def home_menu():
+    print("Home Menu")
+    print("1. Choose/Add Organization")
+    print("2. View Organizations")
+
+
+home_menu()
