@@ -1,9 +1,7 @@
 #Main Codespace
 
 class Employee:
-    def __init__(self, name, record):
-        self.name = name
-        self.record = record
+    pass
 
 
 class Host(Employee):
@@ -18,16 +16,20 @@ class Waiter(Employee):
     pass
 
 class Organization:
-    def __init__(self, name, employees):
-        #def create_organization
-        #def add_employee -- ???
-        pass
+    pass
 
 
 def home_menu():
     print("Home Menu")
     print("1. Choose/Add Organization")
     print("2. View Organizations")
+
+    if input("Enter your choice: ") == "1":
+        pass
+    elif input("Enter your choice: ") == "2":
+        pass
+    else:
+        print("Invalid choice")
 
 
 home_menu()
